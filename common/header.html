@@ -5,14 +5,11 @@
   api.createWidget('banner-header-widget', {
       tagName: 'span', 
       html(attrs, state) {
-      
-      const path = window.location.pathname;
 
       const hideMobile = (!settings.show_mobile && this.site.mobileView) ? "true" : hideMobile;
-      const subCat = (!settings.show_subcategory) ? "true" : subCat;
-      const noDesc = (settings.hide_if_no_description) ? "true" : noDesc;
+      const titleText = settings.title_text;
       
-      if(!noDesc && !subCat && !hideMobile) {
+      if(!hideMobile) {
         $("body").addClass("banner-header");  
 
       
@@ -20,7 +17,7 @@
             "attributes" : {
             }
           }, h('div.banner-title-contents', [
-                  h('h1', "Welcome to C1 Quanta"),   
+                  h('h1', titleText),   
                   h('div.banner-title-description',"This is a description")
               ]),
               
