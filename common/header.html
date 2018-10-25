@@ -2,7 +2,7 @@
   const container = Discourse.__container__;    
   const { h } = require('virtual-dom');
  
-  api.createWidget('category-header-widget', {
+  api.createWidget('banner-header-widget', {
       tagName: 'span', 
       html(attrs, state) {
       
@@ -13,16 +13,16 @@
       const noDesc = (settings.hide_if_no_description) ? "true" : noDesc;
       
       if(!noDesc && !subCat && !hideMobile) {
-        $("body").addClass("category-header");  
+        $("body").addClass("banner-header");  
 
       
-        return h('div.category-title-header', {
+        return h('div.banner-title-header', {
             "attributes" : {
                 "style" : "background-color: white;"
             }
-          }, h('div.category-title-contents', [
+          }, h('div.banner-title-contents', [
                   h('h1', "Welcome to C1 Quanta"),   
-                  h('div.category-title-description',"This is a description")
+                  h('div.banner-title-description',"This is a description")
               ]),
               
           );
@@ -30,14 +30,8 @@
       }      
   }),
 
-  api.decorateWidget('category-header-widget:after', helper => {
-      helper.widget.appEvents.on('page:changed', () => {
-          helper.widget.scheduleRerender();
-      });
-  });
-
 </script> 
 
-<script type='text/x-handlebars' data-template-name='/connectors/below-site-header/category-header-widget'>
-  {{mount-widget widget="category-header-widget"}}
+<script type='text/x-handlebars' data-template-name='/connectors/below-site-header/banner-header-widget'>
+  {{mount-widget widget="banner-header-widget"}}
 </script>

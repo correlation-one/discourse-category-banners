@@ -1,10 +1,10 @@
-.category-title-header {
+.banner-title-header {
   padding-top: 60px;
   display: flex;
   text-align: center;
   width: 100%;
   justify-content: center;
-  .category-title-contents {
+  .banner-title-contents {
     max-width: 500px;
     padding: 40px 40px 30px;
     i {
@@ -17,12 +17,12 @@
     }
   }
 }
-.category-header {
+.banner-header {
  #main-outlet {
      padding-top: 20px;
  }
 }
 
-body[class*="category-"] .category-title-headers { 
+body[class*="category-"] .banner-title-headers { 
   display: none;
 }
