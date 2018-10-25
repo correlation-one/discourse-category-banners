@@ -9,23 +9,12 @@
       const path = window.location.pathname;
 
       const hideMobile = (!settings.show_mobile && this.site.mobileView) ? "true" : hideMobile;
-      const subCat = (!settings.show_subcategory && category.parentCategory) ? "true" : subCat;
-      const noDesc = (settings.hide_if_no_description && !category.description_text) ? "true" : noDesc;
+      const subCat = (!settings.show_subcategory) ? "true" : subCat;
+      const noDesc = (settings.hide_if_no_description) ? "true" : noDesc;
       
       if(!isException && !noDesc && !subCat && !hideMobile) {
         $("body").addClass("category-header");  
-        
-        function catDesc() {
-          if(settings.show_description) {
-            return h('p', category.description_text);
-          }
-        }
 
-        function ifProtected() {
-            if(category.read_restricted) {
-                return h('i.fa.fa-lock');                    
-            }
-        }
       
         return h('div.category-title-header', {
             "attributes" : {
