@@ -14,8 +14,7 @@
     }
     h1 {
       text-transform: capitalize;
-      display: inline;  
-      padding-bottom: 20px;    
+      display: inline;      
     }
   }
 }
@@ -23,6 +22,9 @@
  #main-outlet {
      padding-top: 20px;
  }
+}
+.banner-title-description: {
+  margin-top: 5px; 
 }
 
 body[class*="navigation-"] .banner-title-contents { 
