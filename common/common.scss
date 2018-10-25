@@ -5,6 +5,7 @@
   width: 100%;
   justify-content: center;
   .banner-title-contents {
+    display: none;
     max-width: 500px;
     padding: 40px 40px 30px;
     i {
@@ -23,6 +24,6 @@
  }
 }
 
-body[class*="category-"] .banner-title-contents { 
-  display: none;
+body[class*="navigation-"] .banner-title-contents { 
+  display: flex;
 }
