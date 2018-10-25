@@ -29,7 +29,11 @@
         }
       }      
   }),
-
+  api.decorateWidget('banner-header-widget:after', helper => {
+      helper.widget.appEvents.on('page:changed', () => {
+          helper.widget.scheduleRerender();
+      });
+  });
 
 </script> 
 
