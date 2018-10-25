@@ -7,3 +7,7 @@ title_text:
   type: list
   description: "Text for the Title"
 
+description_text:
+  default: ""
+  type: list
+  description: "Text for the description"

@@ -8,6 +8,7 @@
 
       const hideMobile = (!settings.show_mobile && this.site.mobileView) ? "true" : hideMobile;
       const titleText = settings.title_text;
+      const descriptionText = settings.description_text;
       
       if(!hideMobile) {
         $("body").addClass("banner-header");  
@@ -18,7 +19,7 @@
             }
           }, h('div.banner-title-contents', [
                   h('h1', titleText),   
-                  h('div.banner-title-description',"This is a description")
+                  h('div.banner-title-description', descriptionText)
               ]),
               
           );
