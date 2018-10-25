@@ -8,6 +8,7 @@
     display: none;
     max-width: 1000px;
     padding: 40px 40px 30px;
+    margin-bottom: 5px; 
     i {
       margin-right: .25em;
       font-size: 1.5em;
@@ -22,9 +23,6 @@
  #main-outlet {
      padding-top: 20px;
  }
-}
-.banner-title-description: {
-  margin-top: 5px; 
 }
 
 body[class*="navigation-"] .banner-title-contents { 
